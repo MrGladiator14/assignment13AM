@@ -1,0 +1,94 @@
+bryson@bryson-Nitro-15:~/dev/week-3/assignment13AM$ source .venv/bin/activate && python partA/comparison_report.py
+=== MONTHLY SALES DATA ===
+January: 20 products
+February: 20 products
+March: 20 products
+
+=== JANUARY METRICS ===
+Total Revenue: $9,362,500.00
+Average Order Value: $468,125.00
+Top-Selling Product: Smartphone X
+
+=== FEBRUARY METRICS ===
+Total Revenue: $10,930,000.00
+Average Order Value: $546,500.00
+Top-Selling Product: Smartphone X
+
+=== MARCH METRICS ===
+Total Revenue: $9,947,200.00
+Average Order Value: $497,360.00
+Top-Selling Product: Smartphone X
+
+=== SUMMARY COMPARISON ===
+          Total Revenue  Average Order Value   Top Product
+January         9362500             468125.0  Smartphone X
+February       10930000             546500.0  Smartphone X
+March           9947200             497360.0  Smartphone X
+
+=== USING .QUERY() METHOD ===
+January products with revenue > $100,000 (17 items):
+              product_name  revenue
+0               Laptop Pro  2025000
+1           Wireless Mouse   180000
+3           Cotton T-Shirt   120000
+4             Smartphone X  2100000
+6                    Jeans   375000
+7               Headphones   270000
+9             Coffee Maker   140000
+10            Gaming Chair   200000
+11           Winter Jacket   382500
+12             Tablet Plus  1375000
+13                 Blender   120000
+14            Wool Sweater   198000
+15       Bluetooth Speaker   412500
+16  Machine Learning Guide   142500
+17            Air Purifier   240000
+18                  Hoodie   270000
+19             Smart Watch   600000
+
+February Electronics with >50 units sold (6 items):
+         product_name  units_sold  revenue
+0          Laptop Pro          55  2475000
+1      Wireless Mouse          95   142500
+4        Smartphone X          75  2625000
+7          Headphones          85   255000
+12        Tablet Plus          65  1625000
+15  Bluetooth Speaker          80   440000
+
+March low performance products (3 items):
+    product_name  units_sold  revenue
+10  Gaming Chair          28   218400
+13       Blender          32   121600
+17  Air Purifier          22   253000
+
+=== FINDING OUTLIERS ===
+Top 5 Revenue Products (All Months):
+       month  product_name  revenue
+24  February  Smartphone X  2625000
+20  February    Laptop Pro  2475000
+44     March  Smartphone X  2380000
+40     March    Laptop Pro  2200000
+4    January  Smartphone X  2100000
+
+Bottom 5 Revenue Products (All Months):
+       month     product_name  revenue
+42     March  Python Cookbook    63750
+2    January  Python Cookbook    64000
+5    January        Desk Lamp    70000
+22  February  Python Cookbook    72000
+45     March        Desk Lamp    76000
+
+Top 3 Units Sold Products (All Months):
+      month    product_name  units_sold
+3   January  Cotton T-Shirt         200
+43    March  Cotton T-Shirt         190
+18  January          Hoodie         180
+
+Bottom 3 Units Sold Products (All Months):
+      month  product_name  units_sold
+17  January  Air Purifier          20
+57    March  Air Purifier          22
+10  January  Gaming Chair          25
+
+=== ANALYSIS COMPLETE ===
+(assignment13am) bryson@bryson-Nitro-15:~/dev/week-3/assignment13AM$ 

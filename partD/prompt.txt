@@ -1,0 +1,33 @@
+Task: Develop a robust Python function named generate_data_quality_report that performs an automated audit of a Pandas DataFrame.
+
+Core Requirements:
+
+Input: Accept a single pandas.DataFrame object.
+
+Analysis Metrics: Calculate and include the following in the analysis:
+
+Shape: Total rows and columns.
+
+Data Types: The dtype for every column.
+
+Missing Values: The percentage of null values per column.
+
+Duplicates: Total count of duplicate rows across the dataset.
+
+Uniqueness: Count of unique values for every column.
+
+Descriptive Statistics: Summary statistics (mean, min, max, etc.) via .describe().
+
+Output Specifications:
+
+Return Value: A Python dictionary containing all the metrics listed above, structured for programmatic access.
+
+Visual Summary: Print a cleanly formatted, human-readable summary to the console using headers or separators to distinguish the different sections of the report.
+
+Technical Standards:
+
+Ensure the function handles potential edge cases (e.g., empty DataFrames).
+
+Use clear, PEP 8 compliant code and naming conventions.
+
+Include docstrings explaining the parameters and return type.

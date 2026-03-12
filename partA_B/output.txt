@@ -1,0 +1,142 @@
+bryson@bryson-Nitro-15:~/dev/week-3/assignment13AM$ source .venv/bin/activate && python product_analyzer.py
+=== FIRST 5 MINUTES CHECKLIST ===
+Shape: (24, 6)
+Columns: ['name', 'category', 'price', 'stock', 'rating', 'num_reviews']
+Data types:
+name               str
+category           str
+price            int64
+stock            int64
+rating         float64
+num_reviews      int64
+dtype: object
+Missing values:
+name           0
+category       0
+price          0
+stock          0
+rating         0
+num_reviews    0
+dtype: int64
+Basic statistics:
+              price       stock     rating  num_reviews
+count     24.000000   24.000000  24.000000    24.000000
+mean    7750.000000   80.416667   4.225000   183.958333
+std    11482.462999   48.159984   0.355393   119.824320
+min      600.000000   20.000000   3.600000    34.000000
+25%     1500.000000   43.750000   3.975000    86.250000
+50%     3100.000000   70.000000   4.200000   156.000000
+75%     6875.000000   98.750000   4.500000   245.000000
+max    45000.000000  200.000000   4.900000   445.000000
+First 5 rows:
+              name     category  price  stock  rating  num_reviews
+0       Laptop Pro  Electronics  45000     45     4.5          234
+1   Wireless Mouse  Electronics   1500    120     4.2          156
+2  Python Cookbook        Books    800     80     4.8           89
+3   Cotton T-Shirt     Clothing    600    200     3.9          312
+4     Smartphone X  Electronics  35000     60     4.6          445
+Last 5 rows:
+                name     category  price  stock  rating  num_reviews
+19       Smart Watch  Electronics  15000     40     4.3          412
+20  Novel Collection        Books    900    130     4.1           76
+21    Microwave Oven         Home   6500     45     3.6           56
+22     Running Shoes     Clothing   3200     95     4.4          145
+23     Monitor Stand         Home   1500     60     4.0           89
+
+=== .LOC[] OPERATIONS ===
+Electronics products (7 items):
+                 name     category  price  stock  rating  num_reviews
+0          Laptop Pro  Electronics  45000     45     4.5          234
+1      Wireless Mouse  Electronics   1500    120     4.2          156
+4        Smartphone X  Electronics  35000     60     4.6          445
+7          Headphones  Electronics   3000     90     4.7          278
+12        Tablet Plus  Electronics  25000     55     4.1          389
+15  Bluetooth Speaker  Electronics   5500     75     4.5          156
+19        Smart Watch  Electronics  15000     40     4.3          412
+High rated (>4.0) and cheap (<5000) products (10 items):
+                      name     category  price  stock  rating  num_reviews
+1           Wireless Mouse  Electronics   1500    120     4.2          156
+2          Python Cookbook        Books    800     80     4.8           89
+5                Desk Lamp         Home   2000     35     4.1           67
+6                    Jeans     Clothing   2500    150     4.3          198
+7               Headphones  Electronics   3000     90     4.7          278
+8    Data Science Handbook        Books   1200     65     4.9          145
+11           Winter Jacket     Clothing   4500     85     4.2          167
+16  Machine Learning Guide        Books   1500     95     4.6           98
+20        Novel Collection        Books    900    130     4.1           76
+22           Running Shoes     Clothing   3200     95     4.4          145
+Updated stock for Laptop Pro: 50
+
+=== .ILOC[] OPERATIONS ===
+First 5 products:
+              name     category  price  stock  rating  num_reviews
+0       Laptop Pro  Electronics  45000     50     4.5          234
+1   Wireless Mouse  Electronics   1500    120     4.2          156
+2  Python Cookbook        Books    800     80     4.8           89
+3   Cotton T-Shirt     Clothing    600    200     3.9          312
+4     Smartphone X  Electronics  35000     60     4.6          445
+Last 5 products:
+                name     category  price  stock  rating  num_reviews
+19       Smart Watch  Electronics  15000     40     4.3          412
+20  Novel Collection        Books    900    130     4.1           76
+21    Microwave Oven         Home   6500     45     3.6           56
+22     Running Shoes     Clothing   3200     95     4.4          145
+23     Monitor Stand         Home   1500     60     4.0           89
+Every other row (12 items):
+                      name     category  price  stock  rating  num_reviews
+0               Laptop Pro  Electronics  45000     50     4.5          234
+2          Python Cookbook        Books    800     80     4.8           89
+4             Smartphone X  Electronics  35000     60     4.6          445
+6                    Jeans     Clothing   2500    150     4.3          198
+8    Data Science Handbook        Books   1200     65     4.9          145
+10            Gaming Chair         Home   8000     25     4.4          234
+12             Tablet Plus  Electronics  25000     55     4.1          389
+14            Wool Sweater     Clothing   1800    110     4.0          223
+16  Machine Learning Guide        Books   1500     95     4.6           98
+18                  Hoodie     Clothing   1500    180     3.8          289
+20        Novel Collection        Books    900    130     4.1           76
+22           Running Shoes     Clothing   3200     95     4.4          145
+Rows 10-15, columns 0-3:
+                 name     category  price  stock
+10       Gaming Chair         Home   8000     25
+11      Winter Jacket     Clothing   4500     85
+12        Tablet Plus  Electronics  25000     55
+13            Blender         Home   4000     30
+14       Wool Sweater     Clothing   1800    110
+15  Bluetooth Speaker  Electronics   5500     75
+
+=== FILTERED DATAFRAMES ===
+Budget products (<1000) (3 items):
+                name  category  price  stock  rating  num_reviews
+2    Python Cookbook     Books    800     80     4.8           89
+3     Cotton T-Shirt  Clothing    600    200     3.9          312
+20  Novel Collection     Books    900    130     4.1           76
+Premium products (>10000) (5 items):
+            name     category  price  stock  rating  num_reviews
+0     Laptop Pro  Electronics  45000     50     4.5          234
+4   Smartphone X  Electronics  35000     60     4.6          445
+12   Tablet Plus  Electronics  25000     55     4.1          389
+17  Air Purifier         Home  12000     20     3.9           34
+19   Smart Watch  Electronics  15000     40     4.3          412
+Popular products (>100 reviews and >4.0 rating) (12 items):
+                     name     category  price  stock  rating  num_reviews
+0              Laptop Pro  Electronics  45000     50     4.5          234
+1          Wireless Mouse  Electronics   1500    120     4.2          156
+4            Smartphone X  Electronics  35000     60     4.6          445
+6                   Jeans     Clothing   2500    150     4.3          198
+7              Headphones  Electronics   3000     90     4.7          278
+8   Data Science Handbook        Books   1200     65     4.9          145
+10           Gaming Chair         Home   8000     25     4.4          234
+11          Winter Jacket     Clothing   4500     85     4.2          167
+12            Tablet Plus  Electronics  25000     55     4.1          389
+15      Bluetooth Speaker  Electronics   5500     75     4.5          156
+19            Smart Watch  Electronics  15000     40     4.3          412
+22          Running Shoes     Clothing   3200     95     4.4          145
+
+=== EXPORTING TO CSV ===
+Exported 3 items to budget_products.csv
+Exported 5 items to premium_products.csv
+Exported 12 items to popular_products.csv
+
+=== ANALYSIS COMPLETE ===
+(assignment13am) bryson@bryson-Nitro-15:~/dev/week-3/assignment13AM$ 
